@@ -1,0 +1,162 @@
+{
+  "info": {
+    "name": "Milkman Project - Sahil",
+    "_postman_id": "milkman-collection-001",
+    "description": "Postman collection for testing Milkman DRF APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+
+    {
+      "name": "Users - Get All",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/users/",
+          "host": ["{{base_url}}"],
+          "path": ["users", ""]
+        }
+      }
+    },
+    {
+      "name": "Users - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"milkman1\",\n  \"email\": \"milkman@example.com\",\n  \"phone_number\": \"9876543210\",\n  \"password\": \"Test@123\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/users/",
+          "host": ["{{base_url}}"],
+          "path": ["users", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Category - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/categories/",
+          "host": ["{{base_url}}"],
+          "path": ["categories", ""]
+        }
+      }
+    },
+    {
+      "name": "Category - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Milk\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/categories/",
+          "host": ["{{base_url}}"],
+          "path": ["categories", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Product - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/products/",
+          "host": ["{{base_url}}"],
+          "path": ["products", ""]
+        }
+      }
+    },
+    {
+      "name": "Product - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Cow Milk\",\n  \"category\": 1,\n  \"packet_size\": \"1L\",\n  \"price\": 60\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/products/",
+          "host": ["{{base_url}}"],
+          "path": ["products", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Customer - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/customers/",
+          "host": ["{{base_url}}"],
+          "path": ["customers", ""]
+        }
+      }
+    },
+    {
+      "name": "Customer - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rahul\",\n  \"phone_number\": \"9999999999\",\n  \"address\": \"Pune, Maharashtra\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/customers/",
+          "host": ["{{base_url}}"],
+          "path": ["customers", ""]
+        }
+      }
+    },
+
+    {
+      "name": "Subscription - Get All",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/subscriptions/",
+          "host": ["{{base_url}}"],
+          "path": ["subscriptions", ""]
+        }
+      }
+    },
+    { 
+      "name": "Subscription - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer\": 1,\n  \"product\": 1,\n  \"subscription_type\": \"monthly\",\n  \"start_date\": \"2026-02-01\",\n  \"end_date\": \"2026-03-01\",\n  \"transaction_number\": \"TXN12345\",\n  \"status\": \"active\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/subscriptions/",
+          "host": ["{{base_url}}"],
+          "path": ["subscriptions", ""]
+        }
+      }
+    }
+
+  ]
+}
