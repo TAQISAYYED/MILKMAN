@@ -118,7 +118,7 @@ export default function Homepage() {
             <div className="hp-hero-ring hp-ring-1" />
             <div className="hp-hero-ring hp-ring-2" />
             <div className="hp-hero-circle">
-              <img src="/images/milk1.webp" alt="Fresh milk" />
+              <img src="/images/milk2.png" alt="Fresh milk" />
             </div>
             {/* Floating cards */}
             <div className="hp-float-card hp-float-1">
